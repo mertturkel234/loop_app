@@ -1,0 +1,19 @@
+[workspace]
+members = [
+    "shared/shared-models",
+    "shared/shared-ipc",
+    "shared/shared-config",
+    "engine/engine-etw",
+    "engine/engine-process",
+    "engine/engine-network",
+    "engine/engine-persistence",
+    "engine/engine-detection",
+    "engine/engine-storage",
+]
+resolver = "2"
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = "symbols"
